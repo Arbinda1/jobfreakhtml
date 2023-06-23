@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    #left-panel{
+      float: left;
+      width: 10%;
+      height: 100vh;
+      background-color: #b2d8d1;
+      padding-left: 5px;
+      padding-top: 2px;
+    }
+    ul{
+      list-style: none;
+      text-decoration: none;
+      padding-top: 18px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: 15px;
+    }
+  
+    #content {
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      padding-top: 25px;
+      padding-left: 30px;
+    }
+    #content p {
+      font-family: Arial, sans-serif;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      font-style: oblique;
+    }
+    .atag{
+      text-decoration: none;
+      color: black;
+      font-size: 1.25rem;
+    }
+    a:hover {
+  background-color: yellow;
+}
+    .flex {
+      display: flex;
+    }
+  </style>
+  
+  <script>
+    function showContent(contentId) {
+      var contents = document.getElementsByClassName("content");
+      
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      
+      document.getElementById(contentId).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div id="main-container" class="flex">
+    <div id="left-panel" class="flex">
+      <ul class="flex">
+        <li><a href="#" onclick="showContent('home')" class = "atag">Home</a></li>
+        <li><a href="#" onclick="showContent('contact')" class = "atag">Contact</a></li>
+        <li><a href="#" onclick="showContent('information')" class = "atag">Information</a></li>
+        <li><a href="#" onclick="showContent('guide')"class = "atag">Guide</a></li>
+      </ul>
+    </div>
+    <div id="content" class="flex">
+      <div id="home" class="content">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the content for the Home page.A home page is the main web page of a website. 
+          The term may also refer to the start page shown in a web browser when the application first opens. Usually, the home page is located at the root of the website's domain or subdomain.</p>
+      </div>
+      
+      <div id="contact" class="content" style="display: none;">
+        <h1>Contact Us</h1>
+        <p>
+          Here you can find our contact information.<br>
+          Email Address: contact12@gmail.com<br>
+          Contact No: xxxxxxxx890<br>
+        </p>
+      </div>
+      
+      <div id="information" class="content" style="display: none;">
+        <h1>Information</h1>
+        <p>This web-page is created using HTML and CSS and with a little use of Javascript.HTML is the standard markup language for Web pages. With HTML you can create your own Website.
+          CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed. JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries
+
+        </p>
+      </div>
+      
+      <div id="guide" class="content" style="display: none;">
+        <h1>Guide</h1>
+        <p>
+          Here's a helpful guide for you.<br>
+          I am Arbinda Lution Baruah, currently a student of NIT Silchar B.Tech Electrical 4th semester, here to guide you.<br>
+          A guide is a person who shows and explains points of interest (as on a tour) : something that provides guiding information. a street guide.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
